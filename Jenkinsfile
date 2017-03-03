@@ -15,7 +15,7 @@ for (int i = 0; i < targets.size(); i++) {
                     sh "./scripts/setup-env.sh"
                 }
                 stage("fetch $machine") {
-                    sh "GIT_LOCAL_REF_DIR=/srv/git-cache/ ./scripts/fetch.sh master"
+                    sh "GIT_LOCAL_REF_DIR=/srv/git-cache/ ./scripts/fetch.sh master-next"
                 }
                 stage("build $machine") {
                     sh "MACHINE=${machine} ./scripts/build.sh"
